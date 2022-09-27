@@ -145,7 +145,7 @@ myprint_report() {
     echo -e "${back1}${font1}HOSTNAME${reset} = ${back2}${font2}$(hostname)${reset}"
     echo -e "${back1}${font1}TIMEZONE${reset} = ${back2}${font2}$(cat /etc/timezone) UTC $timez)${reset}"
     echo -e "${back1}${font1}USER${reset} = ${back2}${font2}$(whoami)${reset}"
-    echo -e "${back1}${font1}OS${reset}=${back2}${font2} $(hostnamectl | grep System | sed -r s/'[^:]+: '/''/)${reset}"
+    echo -e "${back1}${font1}OS${reset}=${back2}${font2} $(hostnamectl | grep System | sed -r s/'[^:]+:'/''/)${reset}"
     echo -e "${back1}${font1}DATE${reset} =${back2}${font2} $(date +"%d %B %Y %T")${reset}"
     echo -e "${back1}${font1}UPTIME${reset} =${back2}${font2} $(uptime -p)${reset}"
     echo -e "${back1}${font1}UPTIME_SEC${reset} =${back2}${font2} $(cat /proc/uptime | awk '{print $1}')${reset}"
